@@ -59,12 +59,10 @@ public class Build_Taxi {
 
     public void showinfo() {
         if (driving == 2) {
-            System.out.println("택시 " + num + "번의 목적지는 " + destination + ". 기본거리는 " + basicDist + ". 총 거리는 " + finalDist + ". 주유량은 " + fuel + ". 속도는 " + speed + ". 기본요금 3300원 거리요금 " + distancefee + "으로 " + "최종 요금은 " + finalfee + "원 입니다.");
-        }
-        if (driving == 1) {
+            System.out.println("택시 " + num + "번의 목적지는 " + destination + ". 기본거리는 " + basicDist + ". 총 거리는 " + finalDist + ". 주유량은 " + fuel + ". 속도는 " + speed + ". 기본요금 3300원 거리요금 " + distancefee + "원으로 " + "최종 요금은 " + finalfee + "원 입니다.");
+        }else if (driving == 1) {
             System.out.println("택시 "+num+"번은 일반 상태입니다. 승객을 태울 수 있습니다.");
-        }
-        if (driving == 0){
+        }else if (driving == 0){
             System.out.println("택시 "+num+"번은 주유가 필요합니다. 운행할 수 없습니다.");
         }
     }
