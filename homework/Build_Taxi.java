@@ -15,9 +15,10 @@ public class Build_Taxi {
 
 
 
-    public Build_Taxi() {
+    public Build_Taxi(){
         num++;
-    }
+    };
+
     public void Destination(String destination){
         this.destination = destination;
     }
@@ -30,8 +31,13 @@ public class Build_Taxi {
             this.driving = 1; // 일반 상태로 전환
         }
 
-    public void take(){ // 승객 탑승
-        this.driving = 2; // 운행 중으로 전환
+
+
+
+    public void take() { // 승객 탑승
+        if (this.driving == 1) {
+            this.driving = 2; // 운행 중으로 전환
+        }
     }
 
     public void Speed(int speed){
@@ -68,5 +74,6 @@ public class Build_Taxi {
     }
 
 }
+
 
 
