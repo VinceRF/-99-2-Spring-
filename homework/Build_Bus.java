@@ -23,15 +23,15 @@ public class Build_Bus {
     public boolean Fuel(int fuel, int speed){
         this.fuel = fuel;
         this.speed = speed;
-        if (driving==true){ // 운행중일때
+        if (this.fuel>10 && driving==true){ // 운행중일때
             this.fuel--;
             this.speed++;
         }
-        if(this.fuel<10){
+        if(this.fuel<=10){
             this.speed--;
             driving=false; // 차고지 행으로 전환
 
-            return false;
+//            return false;
         }
         return driving;
     }
@@ -44,7 +44,7 @@ public class Build_Bus {
         } else {
             System.out.println("버스" + num +"은 차고지행입니다."+" 주유가 필요합니다. 현재 주유량"+this.fuel+ " 속도는"+speed+".");
         }
-        if(Pass>=this.maxPass){
+        if(driving==true && Pass>=this.maxPass){
             System.out.println("만원입니다. 승객을 더 태울 수 없습니다.");
         }
     }
